@@ -29,3 +29,9 @@ export type AuthProps = {
 	disableImage?: boolean;
 	disableName?: boolean;
 };
+
+export interface ModalStateProps {
+	isOpen: boolean;
+	type?: string | null;
+	reduxProps?: Record<string, any>;
+}

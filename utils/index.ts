@@ -14,3 +14,13 @@ export const computeClassName = (base: string, config: ClassConfig): string => {
 
 	return [base, ...classes].join(" ");
 };
+
+export const formatTitle = (path: string): string => {
+	const formattedPath = path.startsWith("/") ? path.slice(1) : path;
+	const segments = formattedPath.split("/");
+	const title = segments
+		.map((segment) => segment.charAt(0).toUpperCase() + segment.slice(1))
+		.join(" ");
+
+	return title;
+};

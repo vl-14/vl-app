@@ -7,9 +7,22 @@ import Button from "@/components/Button";
 // Auth
 import Auth from "@/components/Auth";
 import SignIn from "@/components/SignIn";
-import SignOut from "@/components/SignOut";
 
 // Profile
 import UserProfile from "@/components/UserProfile";
 
-export { Layout, Header, Footer, Auth, Button, SignIn, SignOut, UserProfile };
+// Components
+import ConfirmModal from "@/components/Modal/ConfirmModal";
+import Modal from "@/components/Modal/Modal";
+
+export {
+	Layout,
+	Header,
+	Footer,
+	Auth,
+	Button,
+	SignIn,
+	UserProfile,
+	ConfirmModal,
+    Modal
+};
