@@ -23,7 +23,13 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 	const apiUrl = `${process.env.HOMEURL}/api/backend/user`;
 
 	try {
-		const res = await axios.get(apiUrl);
+		const payload = {
+			wish: "BACKEND_SORT",
+		};
+
+		const res = await axios.post(apiUrl, payload, {
+			headers: context.req.headers,
+		});
 		const users = res.data;
 
 		return {

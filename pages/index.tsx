@@ -1,9 +1,14 @@
 import { Button, Layout, SignIn } from "@/components";
-import { useSession } from "next-auth/react";
+import { GetServerSidePropsContext } from "next";
 import Image from "next/image";
+import { authOptions } from "@/pages/api/auth/[...nextauth]";
+import { Session, getServerSession } from "next-auth";
 
-export default function Home() {
-	const { data: session } = useSession();
+export default function Home({
+	cleanedSession,
+}: {
+	cleanedSession: Session | boolean;
+}) {
 	return (
 		<Layout>
 			<div className="flex flex-col justify-center items-center h-full">
@@ -20,12 +25,19 @@ export default function Home() {
 				<h1 className="text-4xl font-bold text-center mb-4">
 					Welcome to LunaDream
 				</h1>
-				{session?.user ? (
-					<Button linkTo="/dashboard">
-						<h4 className="font-bold mt-4 text-center mb-4 ">
-							Go to Dashboard!
-						</h4>
-					</Button>
+				{cleanedSession ? (
+					<div className="flex">
+						<Button linkTo="/dashboard" classNames="mx-2">
+							<h4 className="font-bold mt-4 text-center mb-4 ">
+								See how backend handles sorting!
+							</h4>
+						</Button>
+						<Button linkTo="/sortfe" classNames="mx-2">
+							<h4 className="font-bold mt-4 text-center mb-4 ">
+								See how frontend handles sorting!
+							</h4>
+						</Button>
+					</div>
 				) : (
 					<SignIn>Login Here!</SignIn>
 				)}
@@ -33,3 +45,16 @@ export default function Home() {
 		</Layout>
 	);
 }
+
+export const getServerSideProps = async (
+	context: GetServerSidePropsContext
+) => {
+	const session = await getServerSession(
+		context.req,
+		context.res,
+		authOptions
+	);
+
+	const cleanedSession = session?.user || false;
+	return { props: { cleanedSession } };
+};

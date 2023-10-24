@@ -19,6 +19,7 @@ const UserProfile = ({
 					alt={`${first_name} ${last_name}`}
 					width={100}
 					height={100}
+					priority
 					className="rounded-full"
 				/>
 			</div>

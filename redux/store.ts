@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { modalSlice } from "@/redux/slices";
+import { modalSlice, userSlice } from "@/redux/slices";
 
 export const store = configureStore({
 	reducer: {
 		modal: modalSlice,
+		users: userSlice,
 	},
 });
 
