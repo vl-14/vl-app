@@ -1,40 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js TypeScript Redux Auth Proxy Starter
 
-## Getting Started
+Welcome to our Next.js project built with TypeScript, Redux Toolkit, NextAuth, Axios, and styled with TailwindCSS. This project uses a unique architecture where the Next.js client-side makes API calls to its own Next.js server-side. The server-side then acts as a proxy to communicate with the actual backend server, ensuring added security.
 
-First, run the development server:
+## 🛠️ Technologies
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-   **Next.js**: A popular React framework that offers features like server-side rendering and static site generation.
+-   **TypeScript**: Brings static typing to JavaScript, ensuring more robust code.
+-   **Redux Toolkit**: Helps manage global state in a more efficient manner.
+-   **NextAuth**: Provides authentication solutions, in this case, Google OAuth 2.0.
+-   **Axios**: Promise-based HTTP client for making API calls.
+-   **TailwindCSS**: A utility-first CSS framework for rapid UI development.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+1. **Clone the repository**
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+    ```bash
+    git clone [repository-link]
+    ```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+2. **Navigate to the project directory and install the dependencies**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    ```bash
+    cd your-nextjs-project
+    npm install
+    ```
 
-## Learn More
+3. **Setup Environment Variables**
 
-To learn more about Next.js, take a look at the following resources:
+    - Rename `.env.local.example` to `.env.local`.
+    - Update the variables in `.env.local` with your credentials.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Run the development server**
+    ```bash
+    npm run dev
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The project will start, and you can access it at `http://localhost:3000`.
 
-## Deploy on Vercel
+## 📦 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Before deploying, ensure you've set up all necessary environment variables. Check out `.env.local.example` for a reference of the required variables.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[Include deployment steps based on where you want to deploy, e.g., Vercel, Netlify, or a custom server]
+
+## 🙌 Acknowledgements
+
+-   Thanks to the open-source community for the various packages and tools that made this project possible.
+-   Shoutout to our awesome contributors and testers.
+
+---
+
+Made with ❤️ by [Johnny Alim Fury]
