@@ -42,12 +42,10 @@ The project will start, and you can access it at `http://localhost:3000`.
 
 Before deploying, ensure you've set up all necessary environment variables. Check out `.env.local.example` for a reference of the required variables.
 
-[Include deployment steps based on where you want to deploy, e.g., Vercel, Netlify, or a custom server]
-
 ## 🙌 Acknowledgements
 
 -   Thanks to the open-source community for the various packages and tools that made this project possible.
--   Shoutout to our awesome contributors and testers.
+-   Thanks to the resreq.in for offering the free API.
 
 ---
 
