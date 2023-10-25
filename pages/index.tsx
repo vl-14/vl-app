@@ -26,15 +26,15 @@ export default function Home({
 					Welcome to LunaDream
 				</h1>
 				{cleanedSession ? (
-					<div className="flex">
-						<Button linkTo="/dashboard" classNames="mx-2">
+					<div className="flex flex-col">
+						<Button linkTo="/dashboard" classNames="my-1">
 							<h4 className="font-bold mt-4 text-center mb-4 ">
-								See how backend handles sorting!
+								Example 1
 							</h4>
 						</Button>
-						<Button linkTo="/sortfe" classNames="mx-2">
+						<Button linkTo="/example2" classNames="my-1">
 							<h4 className="font-bold mt-4 text-center mb-4 ">
-								See how frontend handles sorting!
+								Example 2
 							</h4>
 						</Button>
 					</div>

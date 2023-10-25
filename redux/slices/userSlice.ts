@@ -24,13 +24,9 @@ const initialState: UserState = {
 
 export const fetchUsers = createAsyncThunk(
 	"users/fetchUsers",
-	async (payload: { cookie: string; wish: string }) => {
+	async (payload: { wish: string }) => {
 		// In order to allow server side to read session data and authenticate user
-		const response = await axios.post("/api/backend/user", payload, {
-			headers: {
-				Cookie: payload.cookie,
-			},
-		});
+		const response = await axios.post("/api/backend/user", payload, {});
 		return response.data as User[];
 	}
 );

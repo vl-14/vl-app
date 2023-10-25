@@ -42,6 +42,15 @@ The project will start, and you can access it at `http://localhost:3000`.
 
 Before deploying, ensure you've set up all necessary environment variables. Check out `.env.local.example` for a reference of the required variables.
 
+## 📋 Development To-Do List
+
+-   [ ] **Loading Actions**:
+    -   Implement handling of loading actions using Redux state.
+    -   Integrate a loading overlay for better user experience.
+    -   Incorporate animations for a smoother transition during loading.
+
+---
+
 ## 🙌 Acknowledgements
 
 -   Thanks to the open-source community for the various packages and tools that made this project possible.
@@ -49,4 +58,4 @@ Before deploying, ensure you've set up all necessary environment variables. Chec
 
 ---
 
-Made with ❤️ by [Johnny Alim Fury]
+Made with ❤️ by Johnny Alim Fury
