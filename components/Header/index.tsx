@@ -21,6 +21,11 @@ const Header = () => {
 					<span className="text-xl font-semibold">LunaDream</span>
 				</div>
 				<div className="flex items-center">
+					<Link href="/">
+						<p className="mx-4 underline underline-offset-2">
+							Home
+						</p>
+					</Link>
 					<Auth />
 				</div>
 			</div>
